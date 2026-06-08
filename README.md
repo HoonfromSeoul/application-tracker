@@ -64,6 +64,43 @@ data.json             # 실제 저장소 (gitignore 권장)
 
 ---
 
+## 멀티유저 모드 (Supabase Auth + per-user DB)
+
+`VITE_SUPABASE_URL`과 `VITE_SUPABASE_ANON_KEY`가 설정되면 자동으로:
+- Google OAuth 로그인 페이지
+- 사용자별로 격리된 cards/presets (Postgres RLS)
+- 어드민 페이지 (`#/admin`, role=admin인 사용자만)
+- 차단된 계정은 안내 화면
+
+### Supabase 프로젝트 셋업
+
+1. https://supabase.com → 새 프로젝트 (region: Singapore 또는 Tokyo).
+2. **SQL Editor** → `supabase/schema.sql` 전체 복사해 붙여넣기 → Run. 테이블/RLS/트리거/뷰 한 번에 만들어짐.
+3. **Authentication → Providers → Google** 활성화. 자체 OAuth credentials 권장 (Google Cloud Console에서 OAuth 2.0 Client ID 생성, Authorized redirect URIs에 `https://<your-project-ref>.supabase.co/auth/v1/callback` 등록 후 Client ID/Secret 입력).
+4. **Authentication → URL Configuration** → Site URL에 `https://<your-app>.vercel.app` 추가, Redirect URLs에도 동일 + `http://localhost:5173` (개발용).
+5. **Project Settings → API**에서 `Project URL`과 `anon public` 키 복사.
+6. Vercel 프로젝트 → Settings → Environment Variables에 추가:
+   - `VITE_SUPABASE_URL` = Project URL
+   - `VITE_SUPABASE_ANON_KEY` = anon key
+7. **Redeploy** → 첫 로그인 후 SQL Editor에서 본인 계정에 admin 권한 부여:
+   ```sql
+   update public.profiles set role = 'admin' where email = 'you@gmail.com';
+   ```
+
+### 어뷰징 방지 (이미 적용됨)
+
+- per-user 카드 500개 / 프리셋 50개 hard cap (Postgres trigger)
+- `status = 'banned'` 사용자는 RLS에서 모든 insert/update 차단
+- 본인 계정 role/status는 어드민 페이지에서 변경 불가 (실수 방지)
+- Google OAuth로 이메일 검증 완료된 계정만 가입 가능
+- Supabase Auth 자체에 IP/이메일 단위 가입 rate limit 내장
+
+추가로 트래픽 폭주 대비:
+- Vercel 대시보드 → Project → Settings → **Web Application Firewall** → Bot Filtering 활성화
+- Supabase 대시보드 → Auth → Rate Limits 확인 (기본값으로 시작, 필요 시 강화)
+
+---
+
 ## 배포
 
 ### Vercel (정적 호스팅, 무료, 5분)

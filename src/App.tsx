@@ -8,6 +8,8 @@ import { TableView } from './components/Table'
 import { EditModal } from './components/EditModal'
 import { LaunchpadView } from './components/Launchpad'
 import { PlusIcon } from './components/icons'
+import { useAuth } from './lib/auth'
+import { resetStorageState } from './lib/storage'
 
 const SESS = { tab: 'ktrack-tab', view: 'ktrack-view' }
 
@@ -133,6 +135,9 @@ export default function App() {
             </button>
           )
         })}
+        <div style={{ marginLeft: 'auto', paddingBottom: 10 }}>
+          <AccountMenu />
+        </div>
       </nav>
 
       {tab === 'launchpad' ? (
@@ -219,6 +224,36 @@ export default function App() {
           onSave={saveCard} onDelete={deleteCard} onClose={() => setEditing(null)}
         />
       )}
+    </div>
+  )
+}
+
+function AccountMenu() {
+  const { profile, signOut } = useAuth()
+  if (!profile) return null
+  const goAdmin = () => { window.location.hash = '#/admin' }
+  const out = async () => { await signOut(); resetStorageState() }
+  return (
+    <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+      {profile.role === 'admin' && (
+        <button onClick={goAdmin}
+          style={{
+            padding: '5px 10px', border: '0.5px solid var(--m-line-normal)',
+            background: 'var(--m-bg-normal)', color: 'var(--m-label-normal)',
+            borderRadius: 'var(--m-radius-8)', fontSize: 12, fontWeight: 700,
+            cursor: 'pointer',
+          }}>Admin</button>
+      )}
+      <span style={{ fontSize: 12, color: 'var(--m-label-alternative)', maxWidth: 180, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+        {profile.email}
+      </span>
+      <button onClick={out}
+        style={{
+          padding: '5px 10px', border: '0.5px solid var(--m-line-normal)',
+          background: 'var(--m-bg-normal)', color: 'var(--m-label-normal)',
+          borderRadius: 'var(--m-radius-8)', fontSize: 12, fontWeight: 700,
+          cursor: 'pointer',
+        }}>로그아웃</button>
     </div>
   )
 }
