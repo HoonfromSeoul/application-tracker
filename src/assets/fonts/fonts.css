@@ -1,0 +1,82 @@
+/* Pretendard JP — Korean/Japanese-friendly Pretendard, Montage's primary face.
+   Brand-supplied OTFs, self-hosted in this skill. */
+@font-face {
+  font-family: 'Pretendard JP';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('./PretendardJP-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Pretendard JP';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('./PretendardJP-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Pretendard JP';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('./PretendardJP-SemiBold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Pretendard JP';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('./PretendardJP-Bold.otf') format('opentype');
+}
+
+/* Wanted Sans — display face. Variable + static. Public CDN until brand
+   files arrive. */
+@font-face {
+  font-family: 'Wanted Sans Variable';
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/woff2/WantedSansVariable.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: 'Wanted Sans';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/woff2/WantedSans-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Wanted Sans';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/woff2/WantedSans-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Wanted Sans';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/woff2/WantedSans-SemiBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Wanted Sans';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/woff2/WantedSans-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Wanted Sans';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/woff2/WantedSans-ExtraBold.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Wanted Sans';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/woff2/WantedSans-Black.woff2') format('woff2');
+}

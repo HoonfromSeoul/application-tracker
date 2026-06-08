@@ -1,0 +1,82 @@
+@import './assets/fonts/fonts.css';
+@import './assets/montage-tokens.css';
+
+/* Spec default: Blue accent soft tint (Tweaks 패널 미구현 — 고정값) */
+:root {
+  --kt-accent-soft: var(--m-blue-95);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--m-font-sans, 'Pretendard JP', Pretendard, 'Wanted Sans', system-ui, sans-serif);
+  color: var(--m-label-normal);
+  background: var(--m-bg-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+button, input, select, textarea { font-family: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+
+a { color: inherit; }
+
+@keyframes ktrack-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes ktrack-rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ktrack-card { transition: box-shadow .2s, border-color .2s, transform .2s; }
+.ktrack-card:hover {
+  box-shadow: var(--m-shadow-small);
+  border-color: var(--m-line-solid-normal, rgba(112,115,124,.35));
+}
+.ktrack-card:active { transform: scale(0.99); }
+
+.ktrack-btn-primary { transition: background .15s, transform .12s, opacity .12s; }
+.ktrack-btn-primary:not(:disabled):hover { background: var(--m-primary-strong) !important; }
+.ktrack-btn-primary:not(:disabled):active { transform: scale(0.97); opacity: 0.84; }
+
+.ktrack-btn-ghost { transition: background .15s, transform .12s; }
+.ktrack-btn-ghost:hover { background: var(--m-fill-alternative) !important; }
+.ktrack-btn-ghost:active { transform: scale(0.97); }
+
+.ktrack-btn-danger { transition: background .15s; }
+.ktrack-btn-danger:hover { background: var(--m-red-95) !important; }
+
+.ktrack-filterbtn { transition: background .15s, border-color .15s; }
+.ktrack-filterbtn:hover { background: var(--m-fill-alternative); }
+
+.ktrack-iconbtn { transition: background .15s, color .15s; }
+.ktrack-iconbtn:hover { background: var(--m-fill-normal); color: var(--m-label-normal); }
+
+.ktrack-menuitem { transition: background .12s; }
+.ktrack-menuitem:hover { background: var(--m-fill-alternative); }
+
+.ktrack-row { transition: background .12s; }
+.ktrack-row:hover td { background: var(--m-fill-alternative); }
+
+.ktrack-company-link { transition: text-decoration .1s, color .1s; }
+.ktrack-company-link:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--m-fill-strong); border-radius: 10px; border: 2px solid transparent; background-clip: content-box; }
+::-webkit-scrollbar-thumb:hover { background: rgba(112,115,124,.35); background-clip: content-box; border: 2px solid transparent; }
+::-webkit-scrollbar-track { background: transparent; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0s !important;
+    transition-duration: 0s !important;
+  }
+}

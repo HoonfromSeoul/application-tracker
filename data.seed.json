@@ -1,0 +1,98 @@
+{
+  "version": 2,
+  "stages": [
+    "planned", "review", "phone", "onsite", "final", "offer", "passed", "rejected"
+  ],
+  "cards": [
+    {
+      "id": "c1", "company": "Upstage", "position": "AI Product Manager",
+      "url": "https://linkedin.com/jobs/upstage-aipm", "stage": "phone", "tier": "S",
+      "salary": "$150–200K", "remote": "Full Remote", "region": "한국",
+      "applied": "2026-05-28", "interview": "2026-06-10 08:30",
+      "nextAction": "수 8:30 폰스크리닝",
+      "note": "공고: LLM 제품 0→1 경험 강조. 연봉 글로벌 기준 상위. 폰스크리닝 전 제품 케이스 2개 준비."
+    },
+    {
+      "id": "c2", "company": "Airwallex", "position": "Sr PM, Identity & User Security",
+      "url": "https://linkedin.com/jobs/airwallex-srpm", "stage": "review", "tier": "S",
+      "salary": "SGD 140–170K", "remote": "Hybrid", "region": "SG",
+      "applied": "2026-05-30", "interview": "",
+      "nextAction": "답 대기 (EP 비자 필요)",
+      "note": "EP 비자 스폰서 여부 확인 필요. Identity/KYC 도메인 — 핀테크 보안 경험 어필."
+    },
+    {
+      "id": "c3", "company": "Simular", "position": "AI Product Manager",
+      "url": "https://linkedin.com/jobs/simular-aipm", "stage": "review", "tier": "S",
+      "salary": "SGD 120–175K (추정)", "remote": "Onsite", "region": "SG",
+      "applied": "2026-06-01", "interview": "",
+      "nextAction": "답 대기 / LinkedIn 아웃리치",
+      "note": "시드 단계 스타트업. 채용 담당자에게 LinkedIn 직접 아웃리치 고려. 연봉은 추정치."
+    },
+    {
+      "id": "c4", "company": "Makro PRO", "position": "Senior PO",
+      "url": "https://linkedin.com/jobs/makropro-spo", "stage": "review", "tier": "B",
+      "salary": "미확인", "remote": "Hybrid", "region": "APAC",
+      "applied": "2026-05-29", "interview": "",
+      "nextAction": "답 대기",
+      "note": "태국 B2B 커머스. 지역/언어 조건 확인 필요."
+    },
+    {
+      "id": "c5", "company": "크래프톤", "position": "AI Frontier PO",
+      "url": "https://linkedin.com/jobs/krafton-aipo", "stage": "review", "tier": "A",
+      "salary": "~9,000만–1.3억", "remote": "Onsite", "region": "한국",
+      "applied": "2026-05-27", "interview": "",
+      "nextAction": "답 대기 (전문계약직)",
+      "note": "전문계약직 형태. 게임 외 AI 프론티어 조직. 계약 조건/기간 확인."
+    },
+    {
+      "id": "c6", "company": "올리브영", "position": "AI Product Owner",
+      "url": "https://linkedin.com/jobs/oliveyoung-aipo", "stage": "planned", "tier": "A",
+      "salary": "미확인", "remote": "Onsite", "region": "한국",
+      "applied": "", "interview": "",
+      "nextAction": "오늘 저녁 지원",
+      "note": "리테일 + AI 추천. 포트폴리오에서 커머스 추천 케이스 강조. 오늘 저녁 지원 마감."
+    },
+    {
+      "id": "c7", "company": "Mastercard", "position": "Sr Specialist, PM (Merchant)",
+      "url": "https://linkedin.com/jobs/mastercard-srspec", "stage": "rejected", "tier": "B",
+      "salary": "SGD 120–175K", "remote": "Onsite", "region": "SG",
+      "applied": "2026-05-20", "interview": "",
+      "nextAction": "회고: 오버스펙 추정",
+      "note": "회고: JD 대비 시니어리티 오버스펙으로 추정. 다음엔 레벨 핏 먼저 확인."
+    },
+    {
+      "id": "c8", "company": "Agoda", "position": "Senior PM",
+      "url": "https://linkedin.com/jobs/agoda-srpm", "stage": "rejected", "tier": "B",
+      "salary": "방콕 1.5–2억 + relo", "remote": "Onsite", "region": "APAC",
+      "applied": "2026-05-18", "interview": "",
+      "nextAction": "회고: STEM 학위 필터 추정",
+      "note": "회고: STEM 학위 자동 필터에 걸린 것으로 추정. relocation 패키지는 매력적이었음."
+    }
+  ],
+  "presets": [
+    {
+      "id": "p1", "name": "SG · AI PM",
+      "keywords": [{ "term": "AI Product Manager" }, { "term": "AI PM" }], "keywordJoin": "OR",
+      "location": "Singapore", "experience": "Senior", "workType": "근무형태 무관",
+      "datePosted": "7일", "fullTime": true, "latestSort": true, "under10": false
+    },
+    {
+      "id": "p2", "name": "SG · Fintech / Identity PM",
+      "keywords": [{ "term": "Product Manager" }, { "term": "fintech" }, { "term": "identity" }], "keywordJoin": "AND",
+      "location": "Singapore", "experience": "Senior", "workType": "근무형태 무관",
+      "datePosted": "7일", "fullTime": true, "latestSort": true, "under10": false
+    },
+    {
+      "id": "p3", "name": "HK · AI PM",
+      "keywords": [{ "term": "AI Product Manager" }], "keywordJoin": "AND",
+      "location": "Hong Kong", "experience": "Senior", "workType": "근무형태 무관",
+      "datePosted": "7일", "fullTime": true, "latestSort": false, "under10": false
+    },
+    {
+      "id": "p4", "name": "풀리모트 PM",
+      "keywords": [{ "term": "Product Manager" }, { "term": "Senior PM" }, { "term": "intern", "exclude": true }], "keywordJoin": "OR",
+      "location": "Remote", "experience": "Senior", "workType": "Remote",
+      "datePosted": "7일", "fullTime": true, "latestSort": true, "under10": true
+    }
+  ]
+}

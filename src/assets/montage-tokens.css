@@ -1,0 +1,338 @@
+/* ──────────────────────────────────────────────────────────────────
+   Montage Design System — Wanted Lab
+   Colors + Typography tokens
+   Source of truth: wanteddev/montage-ios (Sources/Montage)
+   ────────────────────────────────────────────────────────────────── */
+
+@import url('./fonts/fonts.css');
+
+:root {
+  /* ─── COMMON ─────────────────────────────────────────── */
+  --m-common-100: #ffffff;
+  --m-common-0:   #000000;
+
+  /* ─── COOL NEUTRAL (the workhorse grayscale) ─────────── */
+  --m-coolneutral-100: #ffffff;
+  --m-coolneutral-99:  #fcfcfd;
+  --m-coolneutral-98:  #f7f7f8;
+  --m-coolneutral-97:  #f4f4f5;
+  --m-coolneutral-96:  #f0f1f2;
+  --m-coolneutral-95:  #ebecee;
+  --m-coolneutral-90:  #dbdcdf;
+  --m-coolneutral-80:  #c2c4c8;
+  --m-coolneutral-70:  #aeb0b6;
+  --m-coolneutral-60:  #989ba2;
+  --m-coolneutral-50:  #70737c;
+  --m-coolneutral-40:  #5c5d63;
+  --m-coolneutral-30:  #46474c;
+  --m-coolneutral-25:  #2e2f33;
+  --m-coolneutral-23:  #2a2c30;
+  --m-coolneutral-22:  #37383c;
+  --m-coolneutral-20:  #25262a;
+  --m-coolneutral-17:  #1f2024;
+  --m-coolneutral-15:  #1b1c1e;
+  --m-coolneutral-10:  #171719;
+  --m-coolneutral-7:   #131316;
+  --m-coolneutral-5:   #0e0e10;
+  --m-coolneutral-0:   #000000;
+
+  /* ─── NEUTRAL (warm-tinted) ──────────────────────────── */
+  --m-neutral-99:  #fcfcfb;
+  --m-neutral-95:  #efeeed;
+  --m-neutral-22:  #38373b;
+  --m-neutral-10:  #1a1818;
+
+  /* ─── BLUE (primary) ─────────────────────────────────── */
+  --m-blue-99:  #f0f6ff;
+  --m-blue-95:  #eaf2fe;
+  --m-blue-90:  #d6e6fd;
+  --m-blue-80:  #a8c9fa;
+  --m-blue-70:  #6ea3f7;
+  --m-blue-65:  #3385ff;
+  --m-blue-60:  #1d6df5;
+  --m-blue-55:  #0e63ee;
+  --m-blue-50:  #0066ff;
+  --m-blue-45:  #005eeb;
+  --m-blue-40:  #004ec2;
+  --m-blue-30:  #003a91;
+  --m-blue-20:  #002460;
+  --m-blue-10:  #001230;
+
+  /* ─── RED ────────────────────────────────────────────── */
+  --m-red-95: #ffeaea;
+  --m-red-80: #ffaaaa;
+  --m-red-60: #ff6464;
+  --m-red-50: #ff4242;
+  --m-red-40: #d91f1f;
+  --m-red-30: #a30e0e;
+
+  /* ─── GREEN ──────────────────────────────────────────── */
+  --m-green-95: #d6f7e3;
+  --m-green-60: #19d36b;
+  --m-green-50: #00bf40;
+  --m-green-40: #009933;
+  --m-green-30: #006e23;
+
+  /* ─── ORANGE ─────────────────────────────────────────── */
+  --m-orange-95: #ffeed6;
+  --m-orange-60: #ffa54f;
+  --m-orange-50: #ff8a1f;
+  --m-orange-39: #d96a00;
+  --m-orange-30: #a35100;
+
+  /* ─── RED-ORANGE (accent) ────────────────────────────── */
+  --m-redorange-95: #ffe7d6;
+  --m-redorange-60: #ff7a2b;
+  --m-redorange-50: #ff5e00;
+  --m-redorange-48: #f25800;
+
+  /* ─── LIME ───────────────────────────────────────────── */
+  --m-lime-95: #ecf7d6;
+  --m-lime-60: #a8d83b;
+  --m-lime-50: #94c81e;
+  --m-lime-37: #6b9912;
+
+  /* ─── CYAN ───────────────────────────────────────────── */
+  --m-cyan-95: #d6f0f5;
+  --m-cyan-60: #19b3cf;
+  --m-cyan-50: #0098b2;
+  --m-cyan-40: #007185;
+
+  /* ─── LIGHT BLUE ─────────────────────────────────────── */
+  --m-lightblue-95: #d6f0ff;
+  --m-lightblue-60: #38b4ff;
+  --m-lightblue-50: #0099f2;
+  --m-lightblue-40: #007ac2;
+
+  /* ─── VIOLET ─────────────────────────────────────────── */
+  --m-violet-95: #f0ecfe;
+  --m-violet-60: #7d57ff;
+  --m-violet-50: #6541f2;
+  --m-violet-45: #5731e5;
+  --m-violet-40: #4a26c7;
+
+  /* ─── PURPLE ─────────────────────────────────────────── */
+  --m-purple-95: #f3eafe;
+  --m-purple-60: #ad7eff;
+  --m-purple-50: #9747ff;
+  --m-purple-40: #7d28e6;
+
+  /* ─── PINK ───────────────────────────────────────────── */
+  --m-pink-95: #ffeaf4;
+  --m-pink-60: #ff5ea3;
+  --m-pink-50: #ff3d8a;
+  --m-pink-46: #f02377;
+  --m-pink-40: #cc1664;
+
+  /* ─── SEMANTIC — LIGHT (default) ─────────────────────── */
+  /* Primary (Blue) */
+  --m-primary-normal: var(--m-blue-50);
+  --m-primary-strong: var(--m-blue-45);
+  --m-primary-heavy:  var(--m-blue-40);
+
+  /* Label (text) — opacity baked in via rgba where shown */
+  --m-label-normal:      var(--m-coolneutral-10);                 /* 100% */
+  --m-label-strong:      var(--m-common-0);                       /* 100% */
+  --m-label-neutral:     rgba(55, 56, 60, 0.88);                  /* coolNeutral22 @ 88 */
+  --m-label-alternative: rgba(46, 47, 51, 0.61);                  /* coolNeutral25 @ 61 */
+  --m-label-assistive:   rgba(46, 47, 51, 0.28);
+  --m-label-disable:     rgba(46, 47, 51, 0.16);
+
+  /* Background */
+  --m-bg-normal:                  var(--m-common-100);
+  --m-bg-normal-alt:              var(--m-coolneutral-99);
+  --m-bg-elevated:                var(--m-common-100);
+  --m-bg-elevated-alt:            var(--m-coolneutral-99);
+  --m-bg-transparent:             rgba(255, 255, 255, 0.08);
+  --m-bg-transparent-alt:         rgba(255, 255, 255, 0.28);
+
+  /* Lines (cool-neutral 50 with opacity in light mode) */
+  --m-line-normal:        rgba(112, 115, 124, 0.22);
+  --m-line-neutral:       rgba(112, 115, 124, 0.16);
+  --m-line-alternative:   rgba(112, 115, 124, 0.08);
+  --m-line-solid-normal:  var(--m-coolneutral-96);
+  --m-line-solid-neutral: var(--m-coolneutral-97);
+  --m-line-solid-alt:     var(--m-coolneutral-98);
+
+  /* Status */
+  --m-status-positive:  var(--m-green-50);
+  --m-status-cautionary:var(--m-orange-50);
+  --m-status-negative:  var(--m-red-50);
+
+  /* Fill (translucent overlay) */
+  --m-fill-normal:      rgba(112, 115, 124, 0.08);
+  --m-fill-strong:      rgba(112, 115, 124, 0.16);
+  --m-fill-alternative: rgba(112, 115, 124, 0.05);
+
+  /* Inverse (for dark surfaces inside light pages) */
+  --m-inverse-bg:       var(--m-coolneutral-15);
+  --m-inverse-label:    var(--m-neutral-99);
+  --m-inverse-primary:  var(--m-blue-60);
+
+  /* Interaction */
+  --m-interaction-inactive: var(--m-coolneutral-70);
+  --m-interaction-disable:  var(--m-coolneutral-98);
+
+  /* Material dimmer (modal scrim) */
+  --m-material-dimmer:  rgba(20, 20, 22, 0.52);
+
+  /* Accent — foregrounds (for chips, tags on light) */
+  --m-accent-fg-red:        var(--m-red-40);
+  --m-accent-fg-redorange:  var(--m-redorange-48);
+  --m-accent-fg-orange:     var(--m-orange-39);
+  --m-accent-fg-lime:       var(--m-lime-37);
+  --m-accent-fg-green:      var(--m-green-40);
+  --m-accent-fg-cyan:       var(--m-cyan-40);
+  --m-accent-fg-lightblue:  var(--m-lightblue-40);
+  --m-accent-fg-blue:       var(--m-blue-45);
+  --m-accent-fg-violet:     var(--m-violet-45);
+  --m-accent-fg-purple:     var(--m-purple-40);
+  --m-accent-fg-pink:       var(--m-pink-46);
+
+  /* Shadow tokens (composite, keep in sync with Shadow.swift) */
+  --m-shadow-xsmall: 0 1px 0.5px rgba(23,23,23,0.05);
+  --m-shadow-small:  0 2px 1px rgba(23,23,23,0.03), 0 4px 2.5px rgba(23,23,23,0.03);
+  --m-shadow-medium: 0 4px 2px rgba(23,23,23,0.035), 0 10px 6px rgba(23,23,23,0.035);
+  --m-shadow-large:  0 6px 3px rgba(23,23,23,0.04),  0 16px 9px rgba(23,23,23,0.04);
+  --m-shadow-xlarge: 0 10px 5px rgba(23,23,23,0.05), 0 24px 14px rgba(23,23,23,0.06);
+
+  /* ─── SPACING (4-pt scale) ───────────────────────────── */
+  --m-sp-1:  1px;
+  --m-sp-2:  2px;
+  --m-sp-4:  4px;
+  --m-sp-8:  8px;
+  --m-sp-12: 12px;
+  --m-sp-16: 16px;
+  --m-sp-20: 20px;
+  --m-sp-24: 24px;
+  --m-sp-28: 28px;
+  --m-sp-32: 32px;
+  --m-sp-36: 36px;
+  --m-sp-40: 40px;
+  --m-sp-48: 48px;
+  --m-sp-56: 56px;
+  --m-sp-64: 64px;
+  --m-sp-72: 72px;
+  --m-sp-80: 80px;
+
+  /* ─── RADIUS (Montage rounds generously) ─────────────── */
+  --m-radius-2:  2px;
+  --m-radius-4:  4px;
+  --m-radius-8:  8px;
+  --m-radius-12: 12px;
+  --m-radius-16: 16px;
+  --m-radius-20: 20px;
+  --m-radius-24: 24px;
+  --m-radius-32: 32px;
+  --m-radius-pill: 999px;
+
+  /* ─── TYPOGRAPHY — FAMILIES ──────────────────────────── */
+  --m-font-sans:    'Pretendard JP', 'Pretendard', 'Wanted Sans', -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+  --m-font-display: 'Wanted Sans Variable', 'Wanted Sans', 'Pretendard JP', system-ui, sans-serif;
+  --m-font-mono:    'SF Mono', 'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  /* ─── TYPOGRAPHY — SCALE (px / line-height / tracking) ── */
+  /* All tracking values from Typography.swift, computed em → px at scale */
+  --m-display1-size: 56px;  --m-display1-lh: 72px; --m-display1-track: -1.79px;
+  --m-display2-size: 40px;  --m-display2-lh: 52px; --m-display2-track: -1.13px;
+  --m-display3-size: 36px;  --m-display3-lh: 48px; --m-display3-track: -0.97px;
+  --m-title1-size:   32px;  --m-title1-lh:   44px; --m-title1-track:  -0.81px;
+  --m-title2-size:   28px;  --m-title2-lh:   38px; --m-title2-track:  -0.66px;
+  --m-title3-size:   24px;  --m-title3-lh:   32px; --m-title3-track:  -0.55px;
+  --m-heading1-size: 22px;  --m-heading1-lh: 30px; --m-heading1-track:-0.43px;
+  --m-heading2-size: 20px;  --m-heading2-lh: 28px; --m-heading2-track:-0.24px;
+  --m-headline1-size:18px;  --m-headline1-lh:26px; --m-headline1-track:-0.04px;
+  --m-headline2-size:17px;  --m-headline2-lh:24px; --m-headline2-track: 0px;
+  --m-body1-size:    16px;  --m-body1-lh:    24px; --m-body1-track:    0.09px;
+  --m-body1r-size:   16px;  --m-body1r-lh:   26px; --m-body1r-track:   0.09px;
+  --m-body2-size:    15px;  --m-body2-lh:    22px; --m-body2-track:    0.14px;
+  --m-body2r-size:   15px;  --m-body2r-lh:   24px; --m-body2r-track:   0.14px;
+  --m-label1-size:   14px;  --m-label1-lh:   20px; --m-label1-track:   0.20px;
+  --m-label2-size:   13px;  --m-label2-lh:   18px; --m-label2-track:   0.25px;
+  --m-caption1-size: 12px;  --m-caption1-lh: 16px; --m-caption1-track: 0.30px;
+  --m-caption2-size: 11px;  --m-caption2-lh: 14px; --m-caption2-track: 0.34px;
+
+  /* Weights — Pretendard maps "bold" to SemiBold (600) by default;
+     true Bold (700) is reserved for display3 / title2 / title3 */
+  --m-w-regular: 400;
+  --m-w-medium:  500;
+  --m-w-bold:    600;   /* Pretendard SemiBold */
+  --m-w-heavy:   700;   /* Pretendard Bold (display/title only) */
+}
+
+/* ─── DARK MODE ─────────────────────────────────────────── */
+[data-theme="dark"], .m-theme-dark {
+  --m-primary-normal: var(--m-blue-60);
+  --m-primary-strong: var(--m-blue-55);
+  --m-primary-heavy:  var(--m-blue-50);
+
+  --m-label-normal:      var(--m-coolneutral-99);
+  --m-label-strong:      var(--m-common-100);
+  --m-label-neutral:     rgba(219, 220, 223, 0.88);
+  --m-label-alternative: rgba(194, 196, 200, 0.61);
+  --m-label-assistive:   rgba(194, 196, 200, 0.28);
+  --m-label-disable:     rgba(174, 176, 182, 0.16);
+
+  --m-bg-normal:           var(--m-coolneutral-15);
+  --m-bg-normal-alt:       var(--m-coolneutral-5);
+  --m-bg-elevated:         var(--m-coolneutral-17);
+  --m-bg-elevated-alt:     var(--m-coolneutral-7);
+  --m-bg-transparent:      rgba(31, 32, 36, 0.61);
+  --m-bg-transparent-alt:  rgba(31, 32, 36, 0.61);
+
+  --m-line-normal:       rgba(112, 115, 124, 0.32);
+  --m-line-neutral:      rgba(112, 115, 124, 0.28);
+  --m-line-alternative:  rgba(112, 115, 124, 0.22);
+  --m-line-solid-normal: var(--m-coolneutral-25);
+  --m-line-solid-neutral:var(--m-coolneutral-23);
+  --m-line-solid-alt:    var(--m-coolneutral-22);
+
+  --m-status-positive:   var(--m-green-60);
+  --m-status-cautionary: var(--m-orange-60);
+  --m-status-negative:   var(--m-red-60);
+
+  --m-fill-normal:      rgba(112, 115, 124, 0.22);
+  --m-fill-strong:      rgba(112, 115, 124, 0.28);
+  --m-fill-alternative: rgba(112, 115, 124, 0.12);
+
+  --m-inverse-bg:      var(--m-common-100);
+  --m-inverse-label:   var(--m-neutral-10);
+  --m-inverse-primary: var(--m-blue-50);
+
+  --m-interaction-inactive: var(--m-coolneutral-40);
+  --m-interaction-disable:  var(--m-coolneutral-22);
+
+  --m-material-dimmer: rgba(14, 14, 16, 0.74);
+
+  color-scheme: dark;
+}
+
+/* ──────────────────────────────────────────────────────────
+   Semantic typography — element-level defaults.
+   Apply class names like .m-title1 / .m-body1 / .m-label2.
+   These match Typography.Variant 1:1 from Typography.swift.
+   ────────────────────────────────────────────────────────── */
+html, body { font-family: var(--m-font-sans); color: var(--m-label-normal); background: var(--m-bg-normal); -webkit-font-smoothing: antialiased; }
+
+.m-display1 { font-family: var(--m-font-display); font-weight: var(--m-w-heavy); font-size: var(--m-display1-size); line-height: var(--m-display1-lh); letter-spacing: var(--m-display1-track); }
+.m-display2 { font-weight: var(--m-w-heavy); font-size: var(--m-display2-size); line-height: var(--m-display2-lh); letter-spacing: var(--m-display2-track); }
+.m-display3 { font-weight: var(--m-w-heavy); font-size: var(--m-display3-size); line-height: var(--m-display3-lh); letter-spacing: var(--m-display3-track); }
+.m-title1   { font-weight: var(--m-w-heavy); font-size: var(--m-title1-size); line-height: var(--m-title1-lh); letter-spacing: var(--m-title1-track); }
+.m-title2   { font-weight: var(--m-w-heavy); font-size: var(--m-title2-size); line-height: var(--m-title2-lh); letter-spacing: var(--m-title2-track); }
+.m-title3   { font-weight: var(--m-w-heavy); font-size: var(--m-title3-size); line-height: var(--m-title3-lh); letter-spacing: var(--m-title3-track); }
+.m-heading1 { font-weight: var(--m-w-bold);  font-size: var(--m-heading1-size); line-height: var(--m-heading1-lh); letter-spacing: var(--m-heading1-track); }
+.m-heading2 { font-weight: var(--m-w-bold);  font-size: var(--m-heading2-size); line-height: var(--m-heading2-lh); letter-spacing: var(--m-heading2-track); }
+.m-headline1{ font-weight: var(--m-w-bold);  font-size: var(--m-headline1-size); line-height: var(--m-headline1-lh); letter-spacing: var(--m-headline1-track); }
+.m-headline2{ font-weight: var(--m-w-bold);  font-size: var(--m-headline2-size); line-height: var(--m-headline2-lh); letter-spacing: var(--m-headline2-track); }
+.m-body1    { font-weight: var(--m-w-regular); font-size: var(--m-body1-size); line-height: var(--m-body1-lh); letter-spacing: var(--m-body1-track); }
+.m-body2    { font-weight: var(--m-w-regular); font-size: var(--m-body2-size); line-height: var(--m-body2-lh); letter-spacing: var(--m-body2-track); }
+.m-label1   { font-weight: var(--m-w-medium);  font-size: var(--m-label1-size); line-height: var(--m-label1-lh); letter-spacing: var(--m-label1-track); }
+.m-label2   { font-weight: var(--m-w-medium);  font-size: var(--m-label2-size); line-height: var(--m-label2-lh); letter-spacing: var(--m-label2-track); }
+.m-caption1 { font-weight: var(--m-w-medium);  font-size: var(--m-caption1-size); line-height: var(--m-caption1-lh); letter-spacing: var(--m-caption1-track); }
+.m-caption2 { font-weight: var(--m-w-medium);  font-size: var(--m-caption2-size); line-height: var(--m-caption2-lh); letter-spacing: var(--m-caption2-track); }
+
+/* Weight modifiers — pair with any .m-* size class */
+.m-w-regular { font-weight: var(--m-w-regular); }
+.m-w-medium  { font-weight: var(--m-w-medium); }
+.m-w-bold    { font-weight: var(--m-w-bold); }   /* Pretendard SemiBold */
+.m-w-heavy   { font-weight: var(--m-w-heavy); }  /* Pretendard Bold */
